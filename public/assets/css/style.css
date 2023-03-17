@@ -1,0 +1,1818 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir Next", sans-serif !important;
+}
+
+body {
+  display: flexbox;
+  box-sizing: border-box;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #F1F2F4;
+  overflow: hidden;
+  align-items: center;
+  height: 43px;
+}
+
+.top-nav a {
+  color: #17505C;
+  text-align: center;
+  margin-right: 21px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+header hr {
+  border: 0.5px solid #DADADA;
+  width: 100vm;
+}
+
+#social-media-nav {
+  margin-right: auto;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 23px;
+}
+
+#right-nav {
+  justify-content: right;
+  display: flex;
+  flex-direction: row;
+  margin-right: 50px;
+}
+
+#right-nav hr {
+  width: 16px;
+  height: 0;
+  margin-top: 10px;
+  border: 0.5px solid rgba(23, 80, 92, 1);
+  transform: rotate(90deg);
+  margin-right: 30px;
+
+}
+
+
+
+.dropbtn {
+  background-color: rgba(241, 242, 244, 1);
+  color: #17505C;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: rgba(241, 242, 244, 0.5);
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown img {
+  transform: rotate(270deg);
+  width: 4.16px;
+  height: 7.03px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 53px;
+  height: 102px;
+  z-index: 1;
+  background: #FFFFFF;
+  box-shadow: 0px 7px 24px rgba(23, 80, 92, 0.16);
+  border-radius: 8px;
+
+}
+
+
+.dropdown-content a {
+  color: #17505C;
+  font-size: 14px;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px;
+  gap: 10px;
+
+  position: absolute;
+  width: 44px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.login-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+  align-items: center;
+  height: 84px;
+  z-index: 0;
+}
+
+
+#logo {
+  margin-right: auto;
+  width: 129.77px;
+  height: 36px;
+  margin-left: 50px;
+}
+
+#regist {
+  justify-content: right;
+  margin-right: 50px;
+}
+
+#signup-btn {
+  border: none;
+  width: 120px;
+  height: 42px;
+  background: rgba(255, 145, 77, 1);
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+}
+
+#login-btn {
+  width: 120px;
+  height: 42px;
+  border: 1px solid #FF914D;
+  border-radius: 8px;
+  background: none;
+  font-size: 16px;
+  color: #FF914D;
+}
+
+#signup-btn:hover {
+  background: rgba(255, 145, 77, 0.5);
+  cursor: pointer;
+}
+
+#login-btn:hover {
+  background: rgba(255, 192, 154, 0.5);
+  cursor: pointer;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  width: 936px;
+  gap: 12px;
+}
+
+#search-icon {
+  width: 16.68px;
+  height: 16.68px;
+  padding-left: 13.6px;
+  padding-top: 21px;
+
+}
+
+#search-input {
+  border: none;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #02323D;
+  background: none;
+  background-image: url('/img/Vector 5.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  width: 288px;
+}
+
+#timein,
+#datein {
+  border: none;
+
+}
+
+#time,
+#date {
+  width: 16.67px;
+  height: 16.67px;
+}
+
+.place-content input:checked {
+  background-color: #FF914D;
+  border: none;
+}
+
+.get-location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 24px;
+  gap: 22px;
+  padding-left: 230px;
+  width: 70vw;
+  height: 20px;
+}
+
+#demo {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  background: none;
+  color: #FF914D;
+  text-align: center;
+  width: fit-content;
+
+}
+
+#demo img {
+  width: 12px;
+  height: 14.99px;
+  padding-right: 8px;
+}
+
+#getlocation {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  width: fit-content;
+  margin-top: 15px;
+}
+
+.search-btn {
+  width: 120px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #FF914D;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+
+}
+
+.search-btn:hover {
+  background: rgba(255, 145, 77, 0.519);
+}
+
+.booking img {
+  height: 612px;
+  width: 100%;
+}
+
+.booking-content {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.booking-select {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  height: 60px;
+  width: 504px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+#p1 {
+  font-size: 14px;
+  font-family: "Avenir Next", sans-serif !important;
+
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#p2 {
+  font-size: 48px;
+  text-align: center;
+  font-family: "Avenir Next", sans-serif !important;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+#place {
+  width: 82px;
+  height: 44px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.booking-select p {
+  width: 56px;
+  height: 20px;
+
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #02323D;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.booking-select hr {
+  /* position: absolute; */
+  width: 34px;
+  height: 0;
+  border: 0.5px solid rgba(164, 193, 200, 1);
+  transform: rotate(90deg);
+}
+
+.booking-select-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 17px;
+}
+
+.b1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+}
+
+.b2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.booking-select-options img {
+  height: 13.33px;
+  width: 13.33px;
+}
+
+.place-content {
+  align-items: center;
+  font-size: 14px;
+  width: 82px;
+}
+
+.place-content p {
+  width: fit-content;
+
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+
+  color: #02323D;
+}
+
+#place {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+#date {
+  align-items: center;
+  gap: 10px;
+  width: 89px;
+  height: 34px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  padding-top: 10px;
+}
+
+#time {
+  align-items: center;
+  gap: 10px;
+  width: 82px;
+  height: 34px;
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  padding-top: 10px;
+}
+
+.location {
+  align-items: center;
+  gap: 10px;
+  width: 118px;
+  height: fit-content;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.location p {
+  width: 15vw;
+  height: fit-content;
+}
+
+.location img {
+  width: 13.33px;
+  height: 16.65px;
+}
+
+.search-box {
+  width: 288px;
+  height: 60px;
+
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+}
+
+.over {
+  pointer-events: none;
+  background: #ccc;
+}
+
+.card-box {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  align-items: center;
+  padding-right: 20px;
+  height: fit-content;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 119px;
+  margin-bottom: 120px;
+  height: fit-content;
+  width: 100vw;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1212px;
+  height: fit-content;
+
+}
+
+.product-box {
+  display: flex;
+  flex-direction: column;
+  width: 300рх;
+  padding: 15px;
+  border: 1px solid Orgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  margin: 0px 20px;
+}
+
+.offers {
+  height: fit-content;
+  background-color: #FFFAF8;
+}
+
+.offer-img {
+  padding-top: 76px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.offer-img img {
+  width: 100%;
+}
+
+.card-heading,
+.trans-heading,
+.feedback-heading {
+  padding: 24px 155px;
+  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+
+}
+
+.category-heading {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+
+.card-heading h2,
+.trans-heading h2,
+.category-heading h2 {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+
+  color: #02323D;
+
+  width: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 22;
+}
+
+.feedback-heading h2 {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+
+  color: #02323D;
+}
+
+.card-heading p {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FF914D;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.card-heading .btn-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+
+  width: 84px;
+  height: 36px;
+
+  flex: none;
+  order: 2;
+  flex-grow: 1;
+}
+
+.slide-container {
+  width: 1290px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+
+  /* padding: 40px 0; */
+}
+
+.slide-content {
+  /* margin: 0 40px; */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: #FFF;
+  width: 300px;
+  height: fit-content;
+  margin-right: 30px;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 10px 14px; */
+}
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  /* padding: 25px 0; */
+}
+
+.card-image {
+  position: relative;
+  height: 136px;
+  width: 298px;
+
+  background: #FFF;
+  padding-bottom: 15px;
+}
+
+section .card image {
+  width: 140px;
+  aspect-ratio: 1;
+  /* border-radius: 50%; */
+  overflow: hidden;
+}
+
+/* .card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070F4;
+} */
+.name {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  width: 268px;
+  color: #02323D;
+}
+
+#rating-stars {
+  padding-left: 16px;
+  padding-right: 92px;
+  padding-top: 4px;
+
+}
+
+.description {
+  color: #02323D;
+  text-align: center;
+  padding-left: 16px;
+
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 263px;
+}
+
+.description .location {
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.description .location-img {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.description h2,
+.travel h2,
+.appointment h2 {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.description p,
+.travel p,
+.appointment p {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.service-btns {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.button {
+  border: none;
+  padding: 10px;
+  gap: 10px;
+
+  background: rgba(237, 243, 244, 0.8);
+  border-radius: 8px;
+
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #17505C;
+}
+
+.button {
+  /* display: flex;
+  flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  /* width: 98px; */
+  width: fit-content;
+  background: rgba(237, 243, 244, 0.8);
+  border-radius: 8px;
+
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #17505C;
+  /* margin-bottom: 15.5px; */
+  margin-top: 12px;
+  row-gap: 10px;
+}
+
+.service-btns .active,
+.button:hover {
+  border: none;
+  background: #FF914D;
+  border-radius: 8px;
+
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.price-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* position: absolute; */
+  width: 268px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 16px;
+  margin-right: 16px;
+  gap: 60px;
+}
+
+.status {
+  font-family: 'Avenir Next';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #17505C;
+}
+
+.price {
+  text-align: center;
+}
+
+.price-before {
+  align-items: center;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+
+  text-decoration-line: line-through;
+
+  color: #17505C;
+
+  opacity: 0.9;
+}
+
+.price-after {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.after {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+
+  color: #02323D;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.discount-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 34px;
+  height: 20px;
+
+  background: #EB5757;
+  border-radius: 4px;
+
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+
+  color: #FFFFFF;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.swiper-navBtn {
+  color: #17505C;
+  transition: color 0.3s ease;
+  padding-left: 36px;
+}
+
+.swiper-navBtn:hover {
+  color: #17505C;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  /* font-size: 18px;  */
+  width: 11.54px;
+  height: 20.05px;
+  align-items: center;
+
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+
+  .swiper-navBtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .booking {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .search-bar {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+
+.travel {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 263px;
+  height: 38px;
+  margin-top: 10px;
+}
+
+.travel h2 {
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.travel p {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.full {
+  width: 268px;
+  height: 34px;
+}
+
+.card-next {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* position: absolute; */
+  width: 268px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 16px;
+  margin-right: 16px;
+  gap: 60px;
+}
+
+#btn-wide {
+  width: 99px;
+  align-items: center;
+}
+
+.appointment {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 263px;
+  height: 38px;
+  margin-top: 10px;
+}
+
+.appointment h2 {
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.appointment p {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.appointment a {
+  text-decoration-line: underline;
+  color: #02323D;
+}
+
+.popular,
+.featured,
+.hair {
+  margin-top: 120px;
+}
+
+.hair {
+  margin-bottom: 120px;
+}
+
+.transformation {
+  width: 100vw;
+  height: 646px;
+  background: #FFFAF8;
+}
+
+.trans-heading {
+  padding-top: 60px;
+}
+
+.book-now {
+  border: 1px solid #FF914D;
+  border-radius: 8px;
+  background: none;
+  padding: 10px;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+
+  width: 120px;
+  height: 42px;
+  text-transform: capitalize;
+
+  color: #FF914D;
+}
+
+.comparison-slider {
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 156px;
+  padding-right: 157px;
+  padding-top: 61px;
+  margin-bottom: 59px;
+
+  gap: 112px;
+}
+
+.img-slider img {
+  width: 878px;
+  height: 417px;
+}
+
+.para {
+  width: 297px;
+  height: 125px;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+
+  color: #17505C;
+
+}
+
+.per-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  margin-top: 24px;
+
+  width: 168px;
+  height: 42px;
+}
+
+.per-contact h2 {
+  width: 115px;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  /* line-height: 22px; */
+
+  color: #02323D;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.per-contact p {
+  width: 118px;
+
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+
+  color: #6B7C80;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.img-details {
+  width: 40px;
+  height: 40px;
+}
+
+.shourki {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+
+  text-transform: capitalize;
+
+  color: #FF914D;
+  padding-top: 36px;
+
+}
+
+.category {
+  padding: 120px 156px;
+}
+
+
+
+.view-category {
+  border: none;
+  background: none;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #FF914D;
+}
+
+.category-content {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  gap: 30px;
+
+  margin: 0;
+}
+
+.category-1 img {
+  /* background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 32.69%), url(Hand-with-french-manicure.jpg); */
+  /* filter: drop-shadow(0px 7px 24px rgba(23, 80, 92, 0.16)); */
+  border-radius: 8px;
+}
+
+.category-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: -1;
+}
+
+.bottom-left {
+  /* position: absolute; */
+  bottom: 8px;
+  left: 16px;
+
+}
+
+.bottom-right {
+  /* position: absolute; */
+  bottom: 8px;
+  right: 16px;
+
+}
+
+.bottom-right button {
+  border: none;
+  background: none;
+}
+
+
+
+.category-2 img,
+.category-3 img {
+  z-index: -1;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+#union {
+  width: 100vw;
+}
+
+.brands {
+  background: #E3ECEE;
+  width: 100vw;
+  height: 185px;
+}
+
+.footer {
+  height: 100vh;
+  background: #F9F9F9;
+  padding-left: 156px;
+  padding-right: 156px;
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+
+.footer .logo p {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  width: 260px;
+  color: #6B7C80;
+  padding-top: 12px;
+}
+
+.logo-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 88px;
+  /* align-items: center; */
+}
+
+.discover {
+  width: 169px;
+}
+
+.opentable {
+  width: 170px;
+}
+
+.our-site {
+  width: 144px;
+}
+
+.bussiness {
+  width: 208px;
+}
+
+.logo-footer h2 {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: #02323D;
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+
+.logo-footer li {
+  list-style: none;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 8px;
+  color: #6B7C80;
+}
+
+.social-media {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-right: 16px;
+}
+
+.social-media-footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.copyright-footer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+
+.copyright-footer li,
+.copyright-footer p {
+  list-style: none;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 8px;
+  color: #6B7C80;
+}
+
+
+.copyright {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  gap: 38px;
+}
+
+.payment {
+  padding-top: 40px;
+  /* width: 409px; */
+  color: #6B7C80;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.paymeny-card {
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.payment p {
+  width: 409px;
+}
+
+div.btn-container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 268px;
+  height: 40px;
+  margin-top: 10;
+  padding-top: 10px;
+}
+
+div.btn-container i {
+  display: inline-block;
+  position: relative;
+  /* top: -9px; */
+}
+
+label {
+  color: #02323D;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-color-mode-switch {
+  display: inline-block;
+  margin: 0px;
+  position: relative;
+}
+
+.btn-color-mode-switch>label.btn-color-mode-switch-inner {
+  margin: 0px;
+  width: 268px;
+  height: 32px;
+  background: rgba(237, 243, 244, 0.8);
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+  display: block;
+  border: 1px;
+  border-radius: 8px;
+}
+
+.btn-color-mode-switch>label.btn-color-mode-switch-inner:before {
+  content: attr(data-on);
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  top: 7px;
+  right: 20px;
+
+}
+
+.btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
+  content: attr(data-off);
+  /* content: url(/img/House.png); */
+  width: 130px;
+  height: 16px;
+  background: #fff;
+  border-radius: 26px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 6px -2px #111;
+  padding: 5px 0px;
+  border: 1px solid #FF914D;
+  border-radius: 8px;
+  color: #FF914D;
+
+}
+
+.btn-color-mode-switch>.alert {
+  display: none;
+
+  border: none;
+  color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"] {
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner {
+  background: rgba(237, 243, 244, 0.8);
+  color: #02323D;
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:after {
+  content: attr(data-on);
+  background-image: url(/img/House.png);
+  left: auto;
+  background: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {
+  content: attr(data-off);
+  right: auto;
+  left: 20px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked~.alert {
+  display: block;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  height: 20.05px;
+  width: 11.54px;
+  align-items: center;
+}
+
+.pre-btn {
+  left: 0;
+  margin-left: 171px;
+  flex: none;
+
+  order: 0;
+  flex-grow: 0;
+}
+
+.nxt-btn {
+  right: 0;
+  margin-right: 171px;
+  flex: none;
+
+  order: 2;
+  flex-grow: 0;
+}
+
+.services-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+}
+
+.card-box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  width: 141px;
+  height: fit-content;
+  gap: 16px;
+}
+
+.card-box-content img {
+  width: 86px;
+  height: 86px;
+}
+
+.card-box-content p {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #02323D;
+}
+
+.feedback-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 6px;
+
+  width: 260px;
+}
+
+.feedback-info,
+.par1 {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #17505C;
+}
+
+.par2 {
+  margin-top: 10px;
+  font-family: 'Avenir Next';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: right;
+
+  color: #17505C;
+}
+
+.contact-info p {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #6B7C80;
+}
+
+.contact-info img {
+  width: 45px;
+  height: 45px;
+  margin-top: 15px;
+}
+
+.contact-info h2 {
+  font-family: 'Avenir Next';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.contactin {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+  width: 179px;
+  height: 45px;
+}
+
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 10px;
+  background: #fff;
+}
+
+.feedback-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 29px;
+  margin-bottom: 120px;
+}
+
+.fe-pre-btn,
+.fe-nxt-btn {
+  border: none;
+  background: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.fe-nxt-btn {
+  box-shadow: 4px 8px 16px rgba(108, 57, 25, 0.15);
+}
+
+.fe-pre-btn {
+  margin-left: 106px;
+
+}
+
+@media (max-width: 640px) {
+  .top-nav {
+    display: none;
+  }
+
+  #regist{
+    row-gap: 20px;
+  }
+  #signup-btn,
+  #login-btn{
+    width: 80px;
+
+  }
+
+  .search-box {
+    margin: 10px;
+    width: 80vw;
+  }
+
+  .search-btn {
+    margin: 10px;
+    width: 80vw;
+  }
+
+  .place-content {
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+  }
+
+  .booking-select-options {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #p2,
+  #p1 {
+    display: none;
+  }
+
+  .footer {
+    padding: 10px;
+    height: auto;
+  }
+
+  .logo-footer {
+    row-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .copyright-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 90vw;
+    column-gap: 10px;
+    padding: 0;
+  }
+
+  .info {
+    flex-direction: column;
+    row-gap: 10px;
+
+  }
+
+  .get-location {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    
+  }
+
+  #getlocation {
+    margin: 0;
+  }
+
+  .slide-container {
+    width: auto;
+  }
+
+  #view-all {
+    display: none;
+  }
+
+  #title {
+    font-size: 16px;
+  }
+
+  .logo,
+  #para {
+    width: 80vw;
+  }
+
+  .logo {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  #rows {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    column-gap: 20%;
+    row-gap: 0;
+  }
+
+  .payment {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payment.info {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .card-heading {
+    padding: 40px;
+  }
+
+  .slider-container ,
+  .slide-container{
+    padding: 0;
+    width: 90vw;
+    margin-left: 40px;
+    margin-right: 0;
+  }
+  .slider-container{
+    margin: 40px;
+  }
+
+  .feedback-heading h2 {
+    font-size: 16px;
+  }
+
+  .category {
+    width: 90vw;
+    padding: 10px;
+    flex-direction: row;
+  }
+
+  .category-content {
+    flex-direction: column;
+  }
+
+  .category-2,
+  .category-3 {
+    flex-direction: column;
+  }
+
+  .view-category {
+    font-size: 12px;
+  }
+
+  .trans-heading {
+    width: 100vw;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 60px;
+    
+  }
+
+  .comparison-slider {
+    flex-direction: column;
+    padding: 20px;
+    column-gap: 0;
+  }
+
+  .transformation {
+    height: auto;
+  }
+
+  .img-slider img {
+    width: 550px;
+    height: auto;
+  }
+
+  .comp-content,
+  .para,
+  .per-details {
+    width: 70vw;
+  }
+  .offer-img{
+    height: auto;
+  }
+  .offers{
+    height: 850px;
+  }
+  .brands, .card-content{
+    height:fit-content;
+  }
+  .popular,
+  .hair{
+    margin: 0 0;
+  }
+  .login-nav img{
+    display: none;
+  }
+  .feedback-content{
+    width: auto;
+  }
+  
+
+}
