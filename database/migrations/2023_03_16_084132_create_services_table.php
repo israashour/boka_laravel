@@ -12,9 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('image');
+            $table->id()->autoIncrement();
+            $table->string('name')->nullable(false);
+            $table->string('image')->nullable();
+            $table->boolean('is_active')->default(1);
+            $table->text('description')->nullable();
+            $table->string('location')->nullable();
+            $table->decimal('price', 8,2);
+            $table->decimal('sale', 8,2)->nullable();
             $table->timestamps();
         });
     }
@@ -27,3 +32,4 @@ return new class extends Migration
         Schema::dropIfExists('services');
     }
 };
+

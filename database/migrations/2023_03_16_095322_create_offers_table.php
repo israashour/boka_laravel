@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('offers', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->id()->autoIncrement();
+            $table->string('name')->nullable();
             $table->string('image');
             // $table->boolean('is_availabel');
             $table->text('description');

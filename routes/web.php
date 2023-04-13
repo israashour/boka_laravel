@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[FrontEndController::class, 'welcome'])->name('welcome');
+Route::get('/', [FrontEndController::class, 'welcome'])->name('welcome');
+
+// Route::get('admin',function(){
+//     return view('dashboard.admin');
+// });
+
+// Route::prefix('admin')->group(function () {
+//     Route::get('/service/index', [ServicesController::class, 'index'])->name('service.index');
+//     Route::get('/service/create', [ServicesController::class, 'create']);
+//     Route::post('/service/store', [ServicesController::class, 'store']);
+//     Route::get('/service/show/{id}', [ServicesController::class, 'show']);
+//     Route::get('/service/edit/{id}', [ServicesController::class, 'edit']);
+//     Route::post('/service/update/{id}', [ServicesController::class, 'update']);
+//     Route::delete('/service/destroy{id}', [ServicesController::class, 'destroy']);
+// });
+
+Route::resource('admin', ServicesController::class);
