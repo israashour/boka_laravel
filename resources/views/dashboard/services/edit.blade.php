@@ -36,11 +36,11 @@
                         <textarea class="form-control" rows="3" placeholder="Enter Description" value="{{ $service->description }}"
                             name="description"></textarea>
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="exampleInputPassword1">Location</label>
                         <input type="text" name="location" class="form-control" id="exampleInputPassword1"
                             placeholder="location" value="{{$service->location}}">
-                    </div> --}}
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Price</label>
                         <input type="decimal" name="price" class="form-control" id="exampleInputPassword1"
@@ -55,12 +55,12 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <div class="custom-control custom-switch">
                             <input type="checkbox" name="is_active" class="custom-control-input" id="customSwitch1" checked>
-                            <label class="custom-control-label" for="customSwitch1">Active</label>
+                            <label class="custom-control-label" for="customSwitch1">Activate</label>
                         </div>
-                    </div> --}}
+                    </div>
 
                 </div>
                 <!-- /.card-body -->

@@ -35,15 +35,22 @@ class ServicesController extends Controller
     {
         $request->validate([
             'name' => 'required|string|min:3',
-            // 'location' => 'required|string',
+            'location' => 'required|string',
             'description' => 'string|required',
-            // 'is_active' => 'in:on|string',
+            'is_active' => 'in:on|string',
             'price' => 'required|string',
             'image' => 'nullable|image|mimes:jpg,png'
         ]);
 
         services::create($request->all());
+        $service = new services();
         // Storage::put('file.jpg', $service);
+        if($request->has('image')){
+            $cover = $request->file('image');
+            $imagename = time().$service->name.'.'.$cover->getClientOriginalExtension();
+            $request->file('image')->storePubliclyAs('services',$cover,['disk'=>'public']);
+            $service->image = $imagename;
+        }
 
         return redirect()->route('admin.index')->with('success', 'service created successfully');
     }
@@ -72,15 +79,22 @@ class ServicesController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|min:3',
-            // 'location' => 'required|string|min:3',
+            'location' => 'required|string|min:3',
             'description' => 'required|string|min:3',
-            // 'is_active' => 'in:on|string',
+            'is_active' => 'in:on|string',
             'price' => 'required|string',
             'image' => 'nullable|image|mimes:jpg,png'
         ]);
 
         $updated = services::whereId($id)->update($validatedData);
+        $service = new services();
 
+        if($request->has('image')){
+            $cover = $request->file('image');
+            $imagename = time().$service->name.'.'.$cover->getClientOriginalExtension();
+            $request->file('image')->storePubliclyAs('services',$cover,['disk'=>'public']);
+            $service->image = $imagename;
+        }
         if ($updated) {
             return redirect()->route('admin.index')->with('success', 'Service updated successfully');
         } else {

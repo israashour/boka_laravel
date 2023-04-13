@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id()->autoIncrement();
             $table->string('name')->nullable(false);
             $table->string('image')->nullable();
-            // $table->boolean('is_active');
+            $table->boolean('is_active')->nullable();
             $table->text('description')->nullable(false);
-            // $table->string('location')->nullable(false);
+            $table->string('location')->nullable(false);
             $table->decimal('price', 8,2);
             $table->decimal('sale', 8,2)->nullable();
             $table->timestamps();

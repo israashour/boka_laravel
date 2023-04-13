@@ -31,12 +31,12 @@
                         <textarea class="form-control" rows="3" placeholder="Enter Description" name="description"
                             value="{{ old('description') }}"></textarea>
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="location">Location</label>
                         <input type="text" name="location" class="form-control" id="location" placeholder="location"
                             value="{{ old('location') }}">
 
-                    </div> --}}
+                    </div>
                     <div class="form-group">
                         <label for="price">Price</label>
                         <input type="decimal" name="price" class="form-control" id="price" placeholder="price"
@@ -52,12 +52,12 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <div class="custom-control custom-switch">
                             <input type="checkbox" name="is_active" class="custom-control-input" id="customSwitch1" checked>
                             <label class="custom-control-label" for="customSwitch1">Activate</label>
                         </div>
-                    </div> --}}
+                    </div>
 
                 </div>
                 <!-- /.card-body -->

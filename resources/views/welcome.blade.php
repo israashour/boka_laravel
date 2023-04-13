@@ -101,7 +101,7 @@
     </div>
 @endisset
 
-@isset($business)
+@isset($services)
     <div class="business container-fluid">
     <div class="popular">
         <div class="card-heading">
@@ -186,21 +186,21 @@
             <div class="slide-content overflow-auto">
                 <div class="card-wrapper swiper-wrapper">
                     
-                    @foreach ($offers as $offer)
+                    @foreach ($services as $service)
                     <div class="card swiper-slide">
                         <div class="image-content">
                             <div class="card-image">
-                                <img src="{{ Storage::url('offers/'. $offer->image) }}" alt="" class="card-img" />
+                                <img src="{{ Storage::url('offers/'. $service->image) }}" alt="" class="card-img" />
                             </div>
                         </div>
     
                         <div class="card-content ">
-                            <h2 class="name">{{$offer->name}}</h2>
+                            <h2 class="name">{{$service->name}}</h2>
                             {{-- <img id="rating-stars" src="{{asset('assets/img/Group 20.png')}}" alt="" /> --}}
                             <div class="description">
                                 <div class="location">
-                                    <h2>{{$offer->description}}</h2>
-                                    <p>{{$offer->description}}</p>
+                                    <h2>{{$service->description}}</h2>
+                                    <p>{{$service->description}}</p>
                                 </div>
                                 <div class="location-img">
                                     <img src="{{asset('assets/img/Vector 2.png')}}" alt="" />
@@ -227,10 +227,10 @@
                                 </div>
                                 <div class="price">
                                     <div class="price-before">
-                                        <p class="before">{{$offer->price}}</p>
+                                        <p class="before">{{$service->price}}</p>
                                     </div>
                                     <div class="price-after">
-                                        <p class="after">{{$offer->price}}</p>
+                                        <p class="after">{{$service->price}}</p>
                                         <span class="discount-tag">20%</span>
                                     </div>
                                 </div>
@@ -256,21 +256,21 @@
             <div class="slide-content overflow-auto">
                 <div class="card-wrapper swiper-wrapper">
                     
-                    @foreach ($offers as $offer)
+                    @foreach ($services as $service)
                     <div class="card swiper-slide">
                         <div class="image-content">
                             <div class="card-image">
-                                <img src="{{ Storage::url('offers/'. $offer->image) }}" alt="" class="card-img" />
+                                <img src="{{ Storage::url('offers/'. $service->image) }}" alt="" class="card-img" />
                             </div>
                         </div>
     
                         <div class="card-content ">
-                            <h2 class="name">{{$offer->name}}</h2>
+                            <h2 class="name">{{$service->name}}</h2>
                             {{-- <img id="rating-stars" src="{{asset('assets/img/Group 20.png')}}" alt="" /> --}}
                             <div class="description">
                                 <div class="location">
-                                    <h2>{{$offer->description}}</h2>
-                                    <p>{{$offer->description}}</p>
+                                    <h2>{{$service->description}}</h2>
+                                    <p>{{$service->description}}</p>
                                 </div>
                                 <div class="location-img">
                                     <img src="{{asset('assets/img/Vector 2.png')}}" alt="" />
@@ -297,10 +297,10 @@
                                 </div>
                                 <div class="price">
                                     <div class="price-before">
-                                        <p class="before">{{$offer->price}}</p>
+                                        <p class="before">{{$service->price}}</p>
                                     </div>
                                     <div class="price-after">
-                                        <p class="after">{{$offer->price}}</p>
+                                        <p class="after">{{$service->price}}</p>
                                         <span class="discount-tag">20%</span>
                                     </div>
                                 </div>
