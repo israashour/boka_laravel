@@ -21,10 +21,10 @@
                             <th style="width: 10px">#</th>
                             <th>Name</th>
                             <th>Description</th>
-                            <th>Location</th>
+                            {{-- <th>Location</th> --}}
                             <th>Image</th>
                             <th>Price</th>
-                            <th>Active</th>
+                            {{-- <th>Active</th> --}}
                             <th>Create Date</th>
                             <th>Actions</th>
                         </tr>
@@ -35,10 +35,10 @@
                                 <td>{{ $service->id }}</td>
                                 <td>{{ $service->name }}</td>
                                 <td>{{ $service->description }}</td>
-                                <td>{{ $service->location }}</td>
+                                {{-- <td>{{ $service->location }}</td> --}}
                                 <td>{{ $service->image }}</td>
                                 <td>{{ $service->price }}</td>
-                                <td>{{ $service->is_active ? 'active' : 'non active' }}</td>
+                                {{-- <td>{{ $service->is_active ? 'active' : 'non active' }}</td> --}}
                                 <td>{{ $service->created_at }}</td>
                                 {{-- <td>{{ $service->updated_at }}</td> --}}
                                 <td>

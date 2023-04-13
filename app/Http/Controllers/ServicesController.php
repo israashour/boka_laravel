@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
+
 use App\Models\services;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
@@ -14,8 +16,8 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        $services = services::latest()->paginate(5);
-        return view('dashboard.services.index',compact('services'))->with('i', (request()->input('page',1)-1)*5);
+        $services = services::orderBy('id')->simplePaginate(15);
+        return view('dashboard.services.index', compact('services'));
     }
 
     /**
@@ -33,14 +35,15 @@ class ServicesController extends Controller
     {
         $request->validate([
             'name' => 'required|string|min:3',
-            'location' => 'required|nullable|string|min:3',
-            'description' => 'nullable|string',
-            'is_active' => 'in:on|string',
+            // 'location' => 'required|string',
+            'description' => 'string|required',
+            // 'is_active' => 'in:on|string',
             'price' => 'required|string',
             'image' => 'nullable|image|mimes:jpg,png'
         ]);
-        
+
         services::create($request->all());
+        // Storage::put('file.jpg', $service);
 
         return redirect()->route('admin.index')->with('success', 'service created successfully');
     }
@@ -48,55 +51,54 @@ class ServicesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(services $services)
+    public function show($id)
     {
-        return view('dashboard.services.show',compact('services'));
+        return view('dashboard.services.show', compact('service'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(services $services)
+    public function edit($id)
     {
-        return view('dashboard.services.edit',compact('services'));
+        $service = services::findOrFail($id);
+        return view('dashboard.services.edit', compact('service'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, services $service)
+    public function update(Request $request, $id)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'name' => 'required|string|min:3',
-            'location' => 'required|string|min:3',
-            'description' => 'nullable|string',
-            'is_active' => 'in:on|string',
+            // 'location' => 'required|string|min:3',
+            'description' => 'required|string|min:3',
+            // 'is_active' => 'in:on|string',
             'price' => 'required|string',
             'image' => 'nullable|image|mimes:jpg,png'
         ]);
 
-        $updated = $service->update($request->all());
+        $updated = services::whereId($id)->update($validatedData);
 
-        if($updated){
-            return redirect()->route('admin.index')->with('success','Service updated successfully');
-        }else{
-            return HttpResponse::HTTP_BAD_REQUEST ;
+        if ($updated) {
+            return redirect()->route('admin.index')->with('success', 'Service updated successfully');
+        } else {
+            return HttpResponse::HTTP_BAD_REQUEST;
         }
-        
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(services $service)
+    public function destroy($id)
     {
-        $deleted = $service->delete();
+        $deleted = services::findOrFail($id)->delete();
 
-        if($deleted){
-            return redirect()->route('admin.index')->with('success','Service deleted successfully');
-        }else{
-            return HttpResponse::HTTP_BAD_REQUEST ;
+        if ($deleted) {
+            return redirect()->route('admin.index')->with('success', 'Service deleted successfully');
+        } else {
+            return HttpResponse::HTTP_BAD_REQUEST;
         }
-        
     }
 }
