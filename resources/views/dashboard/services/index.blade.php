@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title mt-2">Services Table</h3>
-                <a href="{{ route('admin.create') }}" class="btn btn-success float-right">Create New Service</a>
+                <a href="{{ route('services.create') }}" class="btn btn-success float-right">Create New Service</a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -45,9 +45,9 @@
                                 <td>{{ $service->created_at }}</td>
                                 <td>{{ $service->updated_at }}</td>
                                 <td>
-                                    <form action="{{ route('admin.destroy', $service->id) }}" method="POST">
+                                    <form action="{{ route('services.destroy', $service->id) }}" method="POST">
                                         <div class="btn-group">
-                                            <a href="{{ route('admin.edit', $service->id) }}" class="btn btn-info">edit</a>
+                                            <a href="{{ route('services.edit', $service->id) }}" class="btn btn-info">edit</a>
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">delete</button>

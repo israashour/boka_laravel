@@ -8,12 +8,12 @@
             <div class="card-header">
                 <h3 class="card-title mt-2">Edit Service</h3>
                 <div class="pull-right">
-                    <a class="btn btn-info float-right" href="{{ route('admin.index') }}"> Back</a>
+                    <a class="btn btn-info float-right" href="{{ route('services.index') }}"> Back</a>
                 </div>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{ route('admin.update', $service->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('services.update', $service->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="card-body">
@@ -33,8 +33,8 @@
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea class="form-control" rows="3" placeholder="Enter Description" value="{{ $service->description }}"
-                            name="description"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Enter Description" 
+                            name="description">{{ $service->description }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Location</label>
@@ -71,11 +71,13 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <input type="hidden" name="is_active" value="{{0}}">
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" name="is_active" class="custom-control-input" id="customSwitch1" checked>
-                            <label class="custom-control-label" for="customSwitch1">Activate</label>
+                            <input type="checkbox" name="is_active" class="custom-control-input" id="activate" value="{{1}}" {{ old('is_active') == '1' ? 'checked' : '' }}>
+                            <label class="custom-control-label" for="activate">Activate</label>
                         </div>
                     </div>
+
 
                 </div>
                 <!-- /.card-body -->

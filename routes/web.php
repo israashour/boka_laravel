@@ -31,4 +31,6 @@ Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
 //     Route::delete('/service/destroy{id}', [ServicesController::class, 'destroy']);
 // });
 
-Route::resource('admin', ServicesController::class);
+// Route::prefix('admin')->group(function () {
+    Route::resource('services', ServicesController::class);
+// });

@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->string('name')->nullable(false);
-            $table->string('image')->nullable();
-            $table->boolean('is_active')->nullable();
-            $table->text('description')->nullable(false);
-            $table->string('location')->nullable(false);
+            $table->id();
+            $table->string('name');
+            $table->string('image');
+            $table->enum('is_active', ['0', '1'])->default('1');
+            $table->text('description');
+            $table->string('location');
             $table->decimal('price', 8,2);
             $table->decimal('sale', 8,2)->nullable();
             $table->time('start_time', 0);

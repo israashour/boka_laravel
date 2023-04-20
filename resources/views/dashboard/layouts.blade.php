@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Starter</title>
+  <title>Admin dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -199,7 +199,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           
           {{-- services --}}
           <li class="nav-item">
-            <a href="{{ route('admin.index') }}" class="nav-link">
+            <a href="{{ route('services.index') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Services

@@ -9,7 +9,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{ route('admin.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     @if ($errors->any())
@@ -28,8 +28,7 @@
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea class="form-control" rows="3" placeholder="Enter Description" name="description"
-                            value="{{ old('description') }}"></textarea>
+                        <textarea class="form-control" rows="3" placeholder="Enter Description" name="description">{{ old('description') }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="location">Location</label>
@@ -41,12 +40,12 @@
                         <div>
                             <span>
                                 <label for="work_time">Start Time</label>
-                                <input type="time" name="work_time" class="form-control col-md-3" id="work_time"
+                                <input type="time" name="start_time" class="form-control col-md-3" id="start_time"
                                     placeholder="Start Time" value="{{ old('start_time') }}">
                             </span>
                             <span>
                                 <label for="work_time">End Time</label>
-                                <input type="time" name="work_time" class="form-control col-md-3" id="work_time"
+                                <input type="time" name="end_time" class="form-control col-md-3" id="end_time"
                                     placeholder="End Time" value="{{ old('end_time') }}">
                             </span>
                         </div>
@@ -67,12 +66,13 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <input type="hidden" name="is_active" value="{{0}}">
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" name="is_active" class="custom-control-input" id="activate"
-                                value="{{ old('is_active') }}">
+                            <input type="checkbox" name="is_active" class="custom-control-input" id="activate" value="{{1}}" {{ old('is_active') == '1' ? 'checked' : '' }}>
                             <label class="custom-control-label" for="activate">Activate</label>
                         </div>
                     </div>
+
 
                 </div>
                 <!-- /.card-body -->
