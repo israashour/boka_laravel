@@ -35,7 +35,21 @@
                         <label for="location">Location</label>
                         <input type="text" name="location" class="form-control" id="location" placeholder="location"
                             value="{{ old('location') }}">
-
+                    </div>
+                    <div class="form-group">
+                        <label for="work_time">Work Hours</label>
+                        <div>
+                            <span>
+                                <label for="work_time">Start Time</label>
+                                <input type="time" name="work_time" class="form-control col-md-3" id="work_time"
+                                    placeholder="Start Time" value="{{ old('start_time') }}">
+                            </span>
+                            <span>
+                                <label for="work_time">End Time</label>
+                                <input type="time" name="work_time" class="form-control col-md-3" id="work_time"
+                                    placeholder="End Time" value="{{ old('end_time') }}">
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="price">Price</label>
@@ -54,8 +68,9 @@
                     </div>
                     <div class="form-group">
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" name="is_active" class="custom-control-input" id="customSwitch1" checked>
-                            <label class="custom-control-label" for="customSwitch1">Activate</label>
+                            <input type="checkbox" name="is_active" class="custom-control-input" id="activate"
+                                value="{{ old('is_active') }}">
+                            <label class="custom-control-label" for="activate">Activate</label>
                         </div>
                     </div>
 

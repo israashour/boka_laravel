@@ -38,13 +38,14 @@ class ServicesController extends Controller
             'location' => 'required|string',
             'description' => 'string|required',
             'is_active' => 'in:on|string',
+            'start_time' => 'date_format:H:i',
+            'end_time' => 'date_format:H:i',
             'price' => 'required|string',
             'image' => 'nullable|image|mimes:jpg,png'
         ]);
 
         services::create($request->all());
         $service = new services();
-        // Storage::put('file.jpg', $service);
         if($request->has('image')){
             $cover = $request->file('image');
             $imagename = time().$service->name.'.'.$cover->getClientOriginalExtension();
@@ -60,6 +61,7 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
+        $service = services::findOrFail($id);
         return view('dashboard.services.show', compact('service'));
     }
 
@@ -82,6 +84,8 @@ class ServicesController extends Controller
             'location' => 'required|string|min:3',
             'description' => 'required|string|min:3',
             'is_active' => 'in:on|string',
+            'start_time' => 'date_format:H:i',
+            'end_time' => 'date_format:H:i',
             'price' => 'required|string',
             'image' => 'nullable|image|mimes:jpg,png'
         ]);
@@ -116,3 +120,5 @@ class ServicesController extends Controller
         }
     }
 }
+
+

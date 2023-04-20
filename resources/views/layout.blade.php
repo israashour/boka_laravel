@@ -8,6 +8,7 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Home</title>
+    {{-- @yield('css') --}}
     <link rel="stylesheet" href="{{asset('assets/css/swiper-bundle.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
     <link

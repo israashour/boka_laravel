@@ -7,7 +7,7 @@ use App\Models\offers;
 use App\Models\services;
 use Illuminate\Http\Request;
 
-class FrontEndController extends Controller
+class HomeController extends Controller
 {
     public function welcome(){
         $services = services::all();

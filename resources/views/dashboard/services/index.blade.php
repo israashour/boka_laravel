@@ -25,6 +25,7 @@
                             <th>Image</th>
                             <th>Price</th>
                             <th>Active</th>
+                            <th>Available</th>
                             <th>Create Date</th>
                             <th>Updated Date</th>
                             <th>Actions</th>
@@ -40,6 +41,7 @@
                                 <td><img src="{{Storage::url('services/'.$service->image)}}" alt="service image" width="60" height="60"></td>
                                 <td>{{ $service->price }}</td>
                                 <td>{{ $service->is_active ? 'active' : 'non active' }}</td>
+                                <td>{{ $service->start_time }} -> {{$service->end_time}}</td>
                                 <td>{{ $service->created_at }}</td>
                                 <td>{{ $service->updated_at }}</td>
                                 <td>

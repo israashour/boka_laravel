@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('location')->nullable(false);
             $table->decimal('price', 8,2);
             $table->decimal('sale', 8,2)->nullable();
+            $table->time('start_time', 0);
+            $table->time('end_time', 0);
             $table->timestamps();
         });
     }

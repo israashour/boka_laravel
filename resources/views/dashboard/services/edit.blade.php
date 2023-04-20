@@ -42,6 +42,21 @@
                             placeholder="location" value="{{$service->location}}">
                     </div>
                     <div class="form-group">
+                        <label for="work_time">Work Hours</label>
+                        <div>
+                            <span>
+                                <label for="work_time">Start Time</label>
+                                <input type="time" name="work_time" class="form-control col-md-3" id="work_time"
+                                    placeholder="Start Time" value="{{ $service->start_time }}">
+                            </span>
+                            <span>
+                                <label for="work_time">End Time</label>
+                                <input type="time" name="work_time" class="form-control col-md-3" id="work_time"
+                                    placeholder="End Time" value="{{ $service->end_time }}">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputPassword1">Price</label>
                         <input type="decimal" name="price" class="form-control" id="exampleInputPassword1"
                             placeholder="price" value="{{ $service->price }}">
